@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.title {
+  margin-top: 70px;
+  margin-bottom: 10px;
+}
+
+.roboto-light {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 25px;
+}
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 30px;
+}
+
+.digit-input-container {
+  display: flex;
+  justify-content: center; /* コンテナ内のアイテムを中央に配置 */
+  margin-top: 50px; /* 上方の要素からの間隔を設定 */
+  flex-wrap: wrap; /* 必要に応じて折り返し */
+}
+
+.digit-input-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.digit-placeholder {
+  width: 20px;
+  height: 40px;
+  margin: 0 8px;
+  text-align: center;
+  border-bottom: 2px solid #ccc; /* デフォルトは灰色の下線 */
+}
+
+.digit-placeholder.has-digit {
+  border-bottom: 2px solid #000; /* 数字がある場合は黒色の下線 */
+}
+
+.virtual-keyboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px; /* 上方の要素からの間隔を設定 */
+}
+
+.keyboard-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.key-button {
+  margin: 0 5px;
+  padding: 10px;
+  width: 50px; /* ボタンの幅を指定 */
+  height: 50px; /* ボタンの高さを指定 */
+  border-radius: 50%; /* ボタンを丸くする */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px; /* フォントサイズを調整 */
+  cursor: pointer;
+  background-color: #000; /* ボタンの背景色を黒に変更 */
+  color: #fff; /* ボタンの文字色を白に変更 */
+  border: none; /* ボーダーを削除 */
+}
+
+.special-key {
+  font-size: 29px; /* 特殊キーのフォントサイズを大きくする */
+}
+
+.key-button.special-key.inactive {
+  background-color: #ccc; /* 灰色の背景 */
+  color: #666; /* 暗めの文字色 */
+  cursor: not-allowed; /* カーソルを「禁止」マークに変更 */
+}

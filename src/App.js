@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import './style/App.css';
+import TelephoneInputArea from './components/TelephoneInputArea';
+import TelephoneKeyboard from './components/TelephoneKeyboard';
 
 function App() {
+  const [digits, setDigits] = useState(Array(11).fill(null));
+  const [index, setIndex] = useState(0);
+
+  const handleDigitInput = (index, value) => {
+    if (index < 11) {
+      const newDigits = [...digits];
+      newDigits[index] = value;
+      setIndex(index + 1);
+      setDigits(newDigits);
+    }
+  };
+
+  const handleDigitDelete = (index) => {
+    if (index > 0) {
+      const newDigits = [...digits];
+      newDigits[index - 1] = null;
+      setIndex(index - 1);
+      setDigits(newDigits);
+    }
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App app-container">
+      <div className="roboto-bold title">電話番号を入力してください</div>
+      <div className="roboto-light">please enter your phone number</div>
+      <TelephoneInputArea digits={digits} />
+      <TelephoneKeyboard digits={digits} index={index} onKeyPress={handleDigitInput} onDeleteKeyPress={handleDigitDelete} />
     </div>
   );
 }

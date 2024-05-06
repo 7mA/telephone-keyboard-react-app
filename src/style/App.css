@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+.app-container {
+  display: flex;
+  align-items: center; /* 垂直方向も中央に配置（必要に応じて） */
+  flex-direction: column; /* 子要素を縦方向に並べる */
+  height: 100vh; /* ビューポートの高さに合わせる */
+}
