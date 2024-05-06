@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/telephone-keyboard-react-app/static/css/main.1eda048b.css",
+    "main.js": "/telephone-keyboard-react-app/static/js/main.33cb9380.js",
+    "static/js/453.0af077ac.chunk.js": "/telephone-keyboard-react-app/static/js/453.0af077ac.chunk.js",
+    "index.html": "/telephone-keyboard-react-app/index.html",
+    "main.1eda048b.css.map": "/telephone-keyboard-react-app/static/css/main.1eda048b.css.map",
+    "main.33cb9380.js.map": "/telephone-keyboard-react-app/static/js/main.33cb9380.js.map",
+    "453.0af077ac.chunk.js.map": "/telephone-keyboard-react-app/static/js/453.0af077ac.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1eda048b.css",
+    "static/js/main.33cb9380.js"
+  ]
+}
